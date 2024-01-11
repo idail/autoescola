@@ -208,7 +208,7 @@
 <body>
     <div class="login">
         <h1><img src="{{ URL::asset('img/logo.png') }}" width="200px"></h1>
-        <form method="post" action="{{route('usuarios.login')}}">
+        <form method="post" action="{{ route('usuarios.login') }}">
             @csrf
             <input type="text" name="usuario" placeholder="Seu Email ou CPF" required="required" />
             <input type="password" name="senha" placeholder="Senha" required="required" />
@@ -221,13 +221,13 @@
     <script>
         /* 
 
-    I built this login form to block the front end of most of my freelance wordpress projects during the development stage. 
+        I built this login form to block the front end of most of my freelance wordpress projects during the development stage. 
 
-    This is just the HTML / CSS of it but it uses wordpress's login system. 
+        This is just the HTML / CSS of it but it uses wordpress's login system. 
 
-    Nice and Simple
+        Nice and Simple
 
-    */
+        */
         //# sourceURL=pen.js
     </script>
 </body>
