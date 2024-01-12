@@ -45,7 +45,7 @@
                                     <td>{{ $data }}</td>
                                     <td>
                                         <a href="{{route('instrutores.edit',$item)}}"><i class="fas fa-edit text-info mr-1"></i></a>
-                                        <a href=""><i class="fas fa-trash text-danger mr-1"></i></a>
+                                        <a href="{{route('instrutores.modal',$item)}}"><i class="fas fa-trash text-danger mr-1"></i></a>
                                     </td>
                                 </tr>
                             @endforeach
@@ -86,7 +86,7 @@
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
-                    <form method="POST" action="">
+                    <form method="POST" action="{{route('instrutores.delete',$id)}}">
                         @csrf
                         @method('delete')
                         <button type="submit" class="btn btn-danger">Excluir</button>
